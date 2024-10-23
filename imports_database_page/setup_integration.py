@@ -2,9 +2,8 @@ import os
 import sys
 from shutil import copyfile
 
+
 def main():
-    # Get the current Python version
-    python_version = f"python{sys.version_info.major}.{sys.version_info.minor}"
 
     # Step 1: Add the script-menu-widget configuration to OMERO.web
     config_src = os.path.join(os.path.dirname(__file__), '03-imports_database_page.omero')

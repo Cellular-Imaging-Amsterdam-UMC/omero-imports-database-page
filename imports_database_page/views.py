@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from django.shortcuts import render
 from omeroweb.webclient.decorators import login_required, render_response
 import logging
 import jwt
-from django.conf import settings
 import time
 
 logger = logging.getLogger(__name__)
