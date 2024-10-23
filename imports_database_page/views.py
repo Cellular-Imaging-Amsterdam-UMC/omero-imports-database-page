@@ -20,11 +20,11 @@ def imports_database_page(request, conn=None, **kwargs):
     user_id = current_user.getId()
 
     payload = {
-        "resource": {"dashboard": 2},
+        "resource": {"dashboard": 6},  # Changed to 6 as per Metabase example
         "params": {
-            "user": user_id,
+            "user_name": [username]  # Using username instead of user_id
         },
-        "exp": int(time.time()) + (10 * 60)  # 10 minute expiration
+        "exp": round(time.time()) + (60 * 10)  # 10 minute expiration
     }
     token = jwt.encode(payload, metabase_secret_key, algorithm="HS256")
 
