@@ -44,6 +44,25 @@
     {% include "webclient/base/includes/ping.html" %}
 {% endblock %}
 
+{% block content %}
+    <style>
+        .admin-message {
+            text-align: center;
+            color: black;
+            padding: 10px 0;
+            font-weight: bold;
+        }
+    </style>
+
+    {% if is_admin %}
+    <div class="admin-message">
+        To access the entire Metabase interface login into: <a href="{{ metabase_site_url|add:'/' }}" target="_blank">{{ metabase_site_url|add:'/' }}</a>
+    </div>
+    {% endif %}
+
+    {{ block.super }}
+{% endblock %}
+
 {% block center_details %}
     <style>
         html, body {
@@ -90,20 +109,7 @@
             height: 100%;
             border: none;
         }
-
-        .admin-message {
-            text-align: center;
-            color: black;
-            padding: 10px 0;
-            font-weight: bold;
-        }
     </style>
-
-    {% if is_admin %}
-    <div class="admin-message">
-        To access the entire Metabase interface login into: <a href="{{ metabase_site_url }}" target="_blank">{{ metabase_site_url }}</a>
-    </div>
-    {% endif %}
 
     <div id="metabase-dashboard"></div>
 {% endblock %}
