@@ -49,18 +49,19 @@
         .admin-message {
             text-align: center;
             color: black;
-            padding: 10px 0;
+            height: 20px;
+            line-height: 20px;
             font-weight: bold;
         }
     </style>
 
+    {{ block.super }}
+
     {% if is_admin %}
     <div class="admin-message">
-        To access the entire Metabase interface login into: <a href="{{ metabase_site_url|add:'/' }}" target="_blank">{{ metabase_site_url|add:'/' }}</a>
+        <a href="{{ metabase_site_url|add:'/' }}" target="_blank">Click here to access the Metabase interface</a>
     </div>
     {% endif %}
-
-    {{ block.super }}
 {% endblock %}
 
 {% block center_details %}
