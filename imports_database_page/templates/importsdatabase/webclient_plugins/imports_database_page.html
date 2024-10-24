@@ -15,7 +15,8 @@
         $(document).ready(function(){
             var METABASE_SITE_URL = "{{ metabase_site_url }}";
             var token = "{{ metabase_token }}";
-            var iframeUrl = METABASE_SITE_URL + "/embed/dashboard/" + token + "#bordered=true&titled=true";
+            var refreshInterval = 20; // Set the refresh interval to 20 seconds
+            var iframeUrl = METABASE_SITE_URL + "/embed/dashboard/" + token + "#bordered=true&titled=true&refresh=" + refreshInterval;
 
             var iframe = $('<iframe>', {
                 src: iframeUrl,
@@ -31,6 +32,11 @@
             iframe.on('load', function() {
                 clearTimeout(loadTimeout);
             });
+
+            // Log admin status to console
+            console.log("User is " + "{% if is_admin %}an admin{% else %}not an admin{% endif %}");
+            console.log("Username: {{ user_name }}");
+            console.log("User ID: {{ user_id }}");
         });
     </script>
 
