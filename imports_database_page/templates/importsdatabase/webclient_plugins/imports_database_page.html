@@ -90,6 +90,20 @@
             height: 100%;
             border: none;
         }
+
+        .admin-message {
+            text-align: center;
+            color: black;
+            padding: 10px 0;
+            font-weight: bold;
+        }
     </style>
+
+    {% if is_admin %}
+    <div class="admin-message">
+        To access the entire Metabase interface login into: <a href="{{ metabase_site_url }}" target="_blank">{{ metabase_site_url }}</a>
+    </div>
+    {% endif %}
+
     <div id="metabase-dashboard"></div>
 {% endblock %}
