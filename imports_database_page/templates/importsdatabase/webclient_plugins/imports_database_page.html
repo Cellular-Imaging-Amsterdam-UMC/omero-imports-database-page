@@ -57,11 +57,11 @@
 
     {{ block.super }}
 
-    {% if is_admin %}
-    <div class="admin-message">
-        <a href="{{ metabase_site_url|add:'/' }}" target="_blank">Click here to access the Metabase interface</a>
+    <div class="bottom-message">
+        {% if is_admin %}
+            <a href="{{ metabase_site_url|add:'/' }}" target="_blank">Click here to access the Metabase interface</a>
+        {% endif %}
     </div>
-    {% endif %}
 {% endblock %}
 
 {% block center_details %}
