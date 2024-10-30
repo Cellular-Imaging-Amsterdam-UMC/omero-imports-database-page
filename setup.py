@@ -60,12 +60,12 @@ setup(
     package_data={
         'database_pages': [
             'templates/databasepages/webclient_plugins/imports_database_pages.html',
-            'templates/databasepages/webclient_plugins/imports_database_pages.html',
+            'templates/databasepages/webclient_plugins/workflows_database_pages.html',
         ],
     },
     entry_points={
         'console_scripts': [
-            'omero-imports-database-page-setup=imports_database_page.setup_integration:main',
+            'omero-database-pages-setup=database_pages.setup_integration:main',
         ],
     },
 )
