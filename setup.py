@@ -59,8 +59,9 @@ setup(
     zip_safe=False,
     package_data={
         'database_pages': [
-            'templates/databasepages/webclient_plugins/imports_database_pages.html',
-            'templates/databasepages/webclient_plugins/workflows_database_pages.html',
+            'templates/databasepages/webclient_plugins/imports_database_page.html',
+            'templates/databasepages/webclient_plugins/workflows_database_page.html',
+            'static/databasepages/css/database_pages.css',
         ],
     },
     entry_points={

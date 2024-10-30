@@ -2,10 +2,11 @@
 {% load i18n %}
 {% load static %}
 
-{% block title %}Imports Database{% endblock %}
+{% block title %}Workflows Database{% endblock %}
 
 {% block link %}
     {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'databasepages/css/database_pages.css' %}">
 {% endblock %}
 
 {% block script %}
@@ -45,17 +46,6 @@
 {% endblock %}
 
 {% block content %}
-    <style>
-        .bottom-message {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: black;
-            height: 20px;
-            font-weight: bold;
-        }
-    </style>
-
     {{ block.super }}
 
     <div class="bottom-message">
@@ -66,53 +56,5 @@
 {% endblock %}
 
 {% block center_details %}
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-
-        #middle_header_wrapper {
-            flex: 0 0 auto;
-        }
-
-        #content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            padding: 0 10px;
-        }
-
-        #center_details {
-            flex: 1;
-            overflow: hidden;
-            margin-top: 10px;
-            margin-bottom: 0; /* Remove bottom margin */
-            border-radius: 10px;
-            border-color: black;
-            width: 100%;
-        }
-
-        #metabase-dashboard {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        #metabase-dashboard iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
-
     <div id="metabase-dashboard"></div>
 {% endblock %}

@@ -4,6 +4,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.imports_database_page, name='imports_database_page'),
-    path('', views.workflows_database_page, name='workflows_database_page'),
+    path('imports/', views.imports_database_page, name='imports_database_page'),
+    path('workflows/', views.workflows_database_page, name='workflows_database_page'),
 ]
