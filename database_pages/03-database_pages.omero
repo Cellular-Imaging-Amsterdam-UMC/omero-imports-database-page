@@ -1,0 +1,4 @@
+# OMERO.web configuration extension of database_pages
+config append -- omero.web.apps '"database_pages"'
+config append -- omero.web.ui.top_links '["Imports", "imports_database_page", {"title": "Browse your imports status and history"}]'
+config append -- omero.web.ui.top_links '["Workflows", "workflows_database_page", {"title": "Browse your workflows status and history"}]'

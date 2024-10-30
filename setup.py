@@ -30,11 +30,11 @@ def read(fname):
 
 
 setup(
-    name="omero-imports-database-page",
+    name="omero-database-pages",
     use_scm_version=True,
     setup_requires=['setuptools_scm'],
     packages=find_packages(exclude=['ez_setup']),
-    description="A Python plugin for OMERO.web to display imports database page",
+    description="A Python plugin for OMERO.web to display database pages",
     long_description=read('README.rst'),
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -50,16 +50,17 @@ setup(
     author='Cellular Imaging Amsterdam UMC',
     author_email='rrosas@amsterdamumc.nl',
     license='AGPL-3.0',
-    url="https://github.com/Cellular-Imaging-Amsterdam-UMC/omero-imports-database-page",
-    download_url='https://github.com/Cellular-Imaging-Amsterdam-UMC/omero-imports-database-page/archive/refs/heads/main.zip',
-    keywords=['OMERO.web', 'plugin', 'imports database'],
+    url="https://github.com/Cellular-Imaging-Amsterdam-UMC/omero-database-pages",
+    download_url='https://github.com/Cellular-Imaging-Amsterdam-UMC/omero-database-pages/archive/refs/heads/main.zip',
+    keywords=['OMERO.web', 'plugin', 'database pages', 'imports database','workflows database'],
     install_requires=['omero-web>=5.6.0', 'pyjwt'],
     python_requires='>=3',
     include_package_data=True,
     zip_safe=False,
     package_data={
-        'imports_database_page': [
-            'templates/importsdatabase/webclient_plugins/imports_database_page.html',
+        'database_pages': [
+            'templates/databasepages/webclient_plugins/imports_database_pages.html',
+            'templates/databasepages/webclient_plugins/imports_database_pages.html',
         ],
     },
     entry_points={
