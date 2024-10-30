@@ -72,7 +72,7 @@ def workflows_database_page(request, conn=None, **kwargs):
     payload = {
         "resource": {"dashboard": int(metabase_dashboard_id)},
         "params": {
-            "user_name": [username],
+            "user": [user_id],
         },
         "exp": round(time.time()) + (60 * 30)  # 10 minute expiration
     }
