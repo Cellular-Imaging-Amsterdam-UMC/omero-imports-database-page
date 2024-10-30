@@ -5,7 +5,7 @@ from shutil import copyfile
 def main():
     # Step 1: Add the database-pages configuration to OMERO.web
     config_src = os.path.join(
-        os.path.dirname(__file__), '03-imports_database_page.omero'
+        os.path.dirname(__file__), '03-database_pages.omero'
     )
     config_dst = '/opt/omero/web/config/03-database_pages.omero'
 
