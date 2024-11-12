@@ -61,7 +61,11 @@ setup(
         'database_pages': [
             'templates/databasepages/webclient_plugins/imports_database_page.html',
             'templates/databasepages/webclient_plugins/workflows_database_page.html',
+            'templates/databasepages/webclient_plugins/server_side_browser_page.html',
             'static/databasepages/css/database_pages.css',
+            'static/databasepages/css/server_side_browser.css',
+            'static/databasepages/js/server_side_browser.js',
+            '03-database_pages.omero',
         ],
     },
     entry_points={
